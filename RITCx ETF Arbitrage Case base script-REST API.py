@@ -246,7 +246,7 @@ def step_once():
     usd_bid, usd_ask = best_bid_ask(USD)   # USD quoted in CAD (USD/CAD)
 
     # Convert RITC to CAD using the USD book
-    ritc_bid_cad = ritc_bid_usd + usd_bid
+    ritc_bid_cad = ritc_bid_usd * usd_bid
     ritc_ask_cad = ritc_ask_usd * usd_ask
 
     # Basket executable values in CAD
